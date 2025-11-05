@@ -6,12 +6,8 @@ const userRoutes = require('./routes/users');
 const messageRoutes = require('./routes/messages');
 
 const app = express();
-const corsOptions = {
-  origin: 'https://sigurnost-frontend-xbdx.onrender.com',
-  optionsSuccessStatus: 200
-};
+app.use(cors());
 
-app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
