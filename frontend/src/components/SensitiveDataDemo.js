@@ -15,7 +15,9 @@ export default function SensitiveDataDemo() {
     };
 
     const register = async () => {
-        await axios.post(`${API}/users/register`, { username, password });
+        await axios.post(`${API}/users/register`, { username, password })
+        .then(res => console.log(res.data))
+        .catch(err => console.error(err));
         setUsername(''); setPassword('');
         fetchUsers();
     };
