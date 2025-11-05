@@ -1,12 +1,8 @@
 const { Pool } = require('pg');
-require('dotenv').config();
 
 const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT
+  connectionString: 'postgres://postgres:lozinka123@db.jhmpqblmtvgqrixtyhmg.supabase.co:5432/postgres',
+  ssl: { rejectUnauthorized: false }  // Supabase zahtijeva SSL
 });
 
 module.exports = pool;
