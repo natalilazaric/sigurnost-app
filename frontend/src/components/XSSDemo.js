@@ -96,6 +96,11 @@ export default function XSSDemo() {
   };
   return (
     <div>
+      <div>
+        <p><strong>Upute: </strong>Ako je ranjivost uključena napadi se izvršavaju, prikazuju na stranici i pohranjuju u nesanitiziranom obliku u bazu. Ako je ranjivost isključena napadi se ne izvršavaju, aplikacija sanitizira uneseni tekst te sanitizirani oblik pohranjuje u bazu.</p>
+        <p><strong>Cilj: </strong>Demonstrirati rizik XSS napada i pokazati zašto je potrebno pravilno sanitizirati korisnički unos prije prikaza.</p>
+        <p><strong>Tablica: </strong>Prikaz unesenih napada, lijevi stupac sadrži prikaz na stranici, dok desni stupac prikazuje pohranu teksta napada u bazi.</p>
+      </div>
       <label>
         <input type="checkbox" checked={enabled} onChange={toggleVuln} /> Ranjivost uključena
       </label>

@@ -31,6 +31,11 @@ export default function SensitiveDataDemo() {
 
     return (
         <div>
+            <div>
+                <p><strong>Upute: </strong>Ako je ranjivost uključena, lozinke se spremaju u čistom tekstu i moguće je demonstrirati napade i propuste. Ako je ranjivost isključena koristi se bcrypt (salt + hash) pa su lozinke sigurno pohranjene.</p>
+                <p><strong>Cilj: </strong>Demonstrirati razliku između nesigurne i sigurne pohrane te prikazati zašto je potrebno hashirati lozinke.</p>
+                <p><strong>Tablica: </strong>Prikaz pohrane podataka u bazi.</p>
+            </div>
             <label>
                 <input type="checkbox" checked={enabled} onChange={toggleVuln} /> Ranjivost uključena
             </label>
